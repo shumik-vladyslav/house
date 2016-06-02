@@ -1,4 +1,4 @@
-clone
-npm install
-bower install
+clone <br>
+npm install <br>
+bower install <br>
 gulp serve
