@@ -1,0 +1,23 @@
+<md-toolbar layout="row" layout-align="center center" md-theme="{{navbar.theme()}}" class="navbar" flex>
+  <span flex="5"></span>
+  <a href="/" class="logo" layout="row" layout-align="center center">
+    <img ng-src="/assets/images/logo.png" alt="">
+    desmark
+  </a>
+  <span flex="5"></span>
+  <section layout="row" layout-align="left center" flex>
+    <md-button ng-repeat="menu in navbar.menu()" ui-sref="{{menu.link}}">{{menu.title}}</md-button>
+  </section>
+  <section layout="row" layout-align="center right" ng-if="!navbar.isAuthorized()">
+    <md-button ng-click="navbar.signIn($event)">Sign in</md-button>
+  	<md-button ng-click="navbar.signUp($event)">Sign up</md-button>
+  </section>
+  <section layout="row" layout-align="center right" ng-if="navbar.isAuthorized()">
+    <md-button class="md-icon-button" ng-click="" aria-label="Notifications">
+      <md-icon md-svg-src="assets/icons/notifications.svg"></md-icon>
+    </md-button>
+    <md-button ng-click="">{{navbar.userInfo().email}}</md-button>
+    <md-button ng-click="navbar.logOut()">Log out</md-button>
+  </section>
+  <span flex="5"></span>
+</md-toolbar>
