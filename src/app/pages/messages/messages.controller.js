@@ -31,7 +31,7 @@
 
       $timeout(function () {
         $scope.showSpinner = false;
-      }, 300);
+      }, 2000);
     }
 
     getMessages();
