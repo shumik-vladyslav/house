@@ -1,35 +1,54 @@
-<div layout="row" layout-align="space-between stretch">
-    <section flex='20'>
-        <md-item ng-repeat="dialog in main.dialogs" ng-click="main.selectDialog(dialog.id)">
-            <md-item-content layout="column" layout-align="start center">
-                <div class="inset">{{dialog.subject}}</div>
-                <div class="inset">{{dialog.created}}</div>
-            </md-item-content>
-            <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-
-        </md-item>
-
-    </section>
-    <md-card ng-controller="MessagesController" flex='70'>
-        <md-card-content ng-show="showMessage">
-            <h2>Messages</h2>
-            <md-content  layout="row" layout-sm="column" layout-align="space-around">
-                <md-progress-circular md-mode="indeterminate" class="md-accent md-hue-2" md-diameter="96" ng-show="showSpinner"></md-progress-circular>
-            </md-content>
-            <md-item ng-repeat="part in messages.parts" ng-if="!showSpinner">
-                <md-item-content layout="column" layout-align="start center">
-                    <div class="inset">{{part.author}}</div>
-                    <div class="inset">{{part.text}}</div>
-                </md-item-content>
-                <md-divider md-inset hide-sm></md-divider>
-            </md-item>
-            <div layout="column" layout-align="start center">
-                <md-input-container class="md-block">
-                    <label>New Message</label>
-                    <input md-no-asterisk name="description" type="text" ng-model="newMessage" ng-disabled="showSpinner">
-                </md-input-container>
-                <md-button class="md-raised md-primary" ng-click="sendMessage()" ng-disabled="showSpinner">Send Message</md-button>
+<div>
+    <section layout="column" layout="space-around center" layout-gt-md="row" layout-wrap layout-align-gt-md="space-around start">
+        <div class="card" flex-gt-md="45" ng-repeat="item in main.data">
+            <div layout="row">
+                <div flex="15"></div>
+                <h1 flex="45">Name</h1>
             </div>
-        </md-card-content>
-    </md-card>
+            <md-card layout="row">
+                <div class="left-card background-card-{{($index) % 4}}" layout="column" layout-align="center center" flex="50">
+                    <div class="row-stat" layout="row" layout-align="center center">
+                        <md-icon flex="5" md-svg-src="assets/icons/delete.svg" class="white"></md-icon>
+                        <span flex="60">CURRENT TEMPERATURE</span>
+                        <div class="big-value" flex="25">{{item.temperature}}&deg;C </div>
+                    </div>
+                    <md-divider></md-divider>
+                    <div class="row-stat" layout="row" layout-align="center center">
+                        <md-icon flex="5" md-svg-src="assets/icons/delete.svg" class="white"></md-icon>
+                        <span flex="60">CURRENT OCCUPANCY</span>
+                        <div class="big-value" flex="25">30 %</div>
+                    </div>
+                    <md-divider></md-divider>
+                    <div class="row-stat" layout="row" layout-align="center center">
+                        <md-icon flex="5" md-svg-src="assets/icons/delete.svg" class="white"></md-icon>
+                        <span flex="60">APP MODE</span>
+                        <div ng-if="item.comfort_active" class="big-value" flex="25">ON</div>
+                        <div ng-if="!item.comfort_active" class="big-value" flex="25">OFF</div>
+                    </div>
+                </div>
+                <div class="right-card-{{($index) % 4}}" flex="50" layout="row">
+                    <div flex="80" layout="column" layout-align="center center">
+                        <span class="desired-temperature" layout="row">
+                            DESIRED TEMPERATURE
+                        </span>
+                        <div class="big-degree">
+                            {{item.temperature.comfort_status}}&deg;C
+                            {{main.getDesired(item)}}
+                        </div>
+                    </div>
+                    <div flex="20" layout="column" layout-align="center center">
+                        <md-button ng-disabled="item.comfort_active" class="md-fab md-mini" ng-click="main.swapComfort(item,false)">
+                            <md-icon md-svg-src="assets/icons/add.svg" class="white"></md-icon>
+                        </md-button>
+                        <md-button ng-disabled="!item.comfort_active" class="md-fab md-mini" ng-click="main.swapComfort(item,false)">
+                            <md-icon md-svg-src="assets/icons/archive.svg" class="white"></md-icon>
+                        </md-button>
+                        <md-button class="md-fab md-mini">
+                            <md-icon md-svg-src="assets/icons/edit.svg" class="white"></md-icon>
+                        </md-button>
+                    </div>
+                </div>
+            </md-card>
+        </div>
+    </section>
 </div>

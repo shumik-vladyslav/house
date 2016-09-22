@@ -133,22 +133,268 @@ $family-Raleway-semibold: "Raleway Semibold";
 html {
   font-family: 'Raleway', serif;
 }
-
-// [layout=row] {
-//   flex-direction: row;
-// }
+.wrap{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7fbfc+0,d9edf2+41,add9e4+100 */
+background: #f7fbfc; /* Old browsers */
+background: -moz-linear-gradient(top,  #f7fbfc 0%, #d9edf2 41%, #add9e4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f7fbfc 0%,#d9edf2 41%,#add9e4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f7fbfc 0%,#d9edf2 41%,#add9e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 ); /* IE6-9 */
+width: 100%;
+height: 100%;
+}
 
 h1{
-  font-family: 'Raleway Light';
-  font-weight: lighter;
-  color: $primary-color;
-  font-size: 60px;
-  margin: 0 0 10px;
+    color: #68859c;
+}
+.card{
+ 
+}
+.card md-card{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 
-h2{
-  font-family: 'Raleway Bold';
-  color: $primary-dark-color;
-  font-size: 50px;
-  margin: 0 0 10px;
+.left-card{
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
+
+.left-card div{
+    width: 100%;
+    color: white;
+}
+
+.big-degree{
+    font-size: 100px;
+}
+
+.big-value{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.background-card-0{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fb3d1+0,758da0+56,758da0+56,828493+75,a0706e+100 */
+    background: #3fb3d1; /* Old browsers */
+    background: -moz-linear-gradient(left,  #3fb3d1 0%, #758da0 56%, #758da0 56%, #828493 75%, #a0706e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #3fb3d1 0%,#758da0 56%,#758da0 56%,#828493 75%,#a0706e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #3fb3d1 0%,#758da0 56%,#758da0 56%,#828493 75%,#a0706e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fb3d1', endColorstr='#a0706e',GradientType=1 ); /* IE6-9 */
+}
+
+.right-card-0{
+    color:#cc3132;
+}
+
+.right-card-0 div .md-button {
+  color : #cc3132;
+   background-color: #cc3132;
+}
+
+.right-card-0 div .md-button:not([disabled]):hover {
+  background-color: #a70001;
+}
+
+.right-card-0 div .md-button[disabled] {
+  color : #cc3132;
+  background-color: transparent;
+}
+
+.background-card-1{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#88a650+0,af9e1e+50,cd9d20+71,cd9d20+75,cd9d20+100 */
+background: #88a650; /* Old browsers */
+background: -moz-linear-gradient(left,  #88a650 0%, #af9e1e 50%, #cd9d20 71%, #cd9d20 75%, #cd9d20 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #88a650 0%,#af9e1e 50%,#cd9d20 71%,#cd9d20 75%,#cd9d20 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #88a650 0%,#af9e1e 50%,#cd9d20 71%,#cd9d20 75%,#cd9d20 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88a650', endColorstr='#cd9d20',GradientType=1 ); /* IE6-9 */
+}
+
+.right-card-1{
+    color:#e89b22;
+}
+.right-card-1 div .md-button {
+  color : #e89b22;
+}
+
+.right-card-1 div .md-button:not([disabled]):hover {
+  background-color: #e89b22;
+}
+
+.right-card-1 div .md-button[disabled] {
+  color : #e89b22;
+  background-color: transparent;
+}
+
+.background-card-2{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4d2d0+1,d3d3d3+51,d3d3d3+100 */
+background: #d4d2d0; /* Old browsers */
+background: -moz-linear-gradient(left,  #d4d2d0 1%, #d3d3d3 51%, #d3d3d3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #d4d2d0 1%,#d3d3d3 51%,#d3d3d3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #d4d2d0 1%,#d3d3d3 51%,#d3d3d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d2d0', endColorstr='#d3d3d3',GradientType=1 ); /* IE6-9 */
+}
+
+.right-card-2{
+    color:#d2d2d2;
+}
+
+.right-card-2 div .md-button {
+  color : #d2d2d2;
+   background-color: #d2d2d2;
+}
+
+.right-card-2 div .md-button:not([disabled]):hover {
+  background-color: #7f7f7f;
+}
+
+.right-card-2 div .md-button[disabled] {
+  color : #d2d2d2;
+  background-color: transparent;
+}
+
+.background-card-3{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c54e3e+0,ce5237+51,dc731e+100 */
+background: #c54e3e; /* Old browsers */
+background: -moz-linear-gradient(left,  #c54e3e 0%, #ce5237 51%, #dc731e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #c54e3e 0%,#ce5237 51%,#dc731e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #c54e3e 0%,#ce5237 51%,#dc731e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c54e3e', endColorstr='#dc731e',GradientType=1 ); /* IE6-9 */
+}
+
+.right-card-3{
+    color:#e0811d;
+}
+
+  md-divider {
+    background-color: rgb(250,250,250);
+    color: rgb(250,250,250);
+    width: 80%;
+    margin-left: 10%
+   }
+  @media  screen and (min-device-width: 300px) and (min-width: 300px){
+    .card md-card{
+        font-size: 7px;
+        height: 110px;
+    }
+    .big-degree{
+        font-size: 50px;
+    }
+
+    .big-value{
+        font-weight: bolder;
+        font-size: 13px;
+    }
+
+    .desired-temperature{
+        font-size: 9px;
+    }
+    .left-card .row-stat{
+        margin-bottom: 5px;
+    }
+
+    .md-button {
+        padding: 0 6px 0 6px;
+        margin: 6px 8px 6px 8px;
+        min-width: 1px;
+        min-height: 1px;
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration:none;
+        border: none;
+        outline: none;
+    }
+    .md-button.md-fab.md-mini {
+        line-height: 40px;
+        width: 25px;
+        height: 25px;
+    }
+    .md-button.md-icon-button md-icon, button.md-button.md-fab md-icon {
+        display: table-row;
+    }
+ }
+ 
+@media  screen and (min-device-width: 375px) and (min-width: 375px){
+   .card md-card{
+        font-size: 8px;
+        height: 110px;
+    }
+     .big-value{
+        font-weight: bolder;
+        font-size: 15px;
+    }
+     .big-degree{
+        font-size: 50px;
+    }
+}
+
+@media  screen and (min-device-width: 768px) and (min-width: 768px){
+   .card md-card{
+        font-size: 13px;
+        height: 110px;
+    }
+     .big-value{
+        font-weight: bolder;
+        font-size: 20px;
+    }
+     .big-degree{
+        font-size: 60px;
+    }
+    .desired-temperature{
+        font-size: 13px;
+    }
+    .card md-card{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+  @media  screen and (min-device-width: 960px) and (min-width: 960px){
+    .card md-card{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+  
+ }
+
+  @media  screen and (min-device-width: 1280px) and (min-width: 1280px){
+     .card md-card{
+        width: 100%;
+        height: 150px;
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+      .md-button {
+        padding: 0 6px 0 6px;
+        margin: 6px 8px 6px 8px;
+        min-width: 1px;
+        min-height: 1px;
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration:none;
+        border: none;
+        outline: none;
+    }
+    .md-button.md-fab.md-mini {
+        line-height: 40px;
+        width: 45px;
+        height: 45px;
+    }
+    .md-button.md-icon-button md-icon, button.md-button.md-fab md-icon {
+        display: table-row;
+    }
+ }
