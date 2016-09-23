@@ -11,6 +11,7 @@
 				'ngAria',
 				'ui.router',
 				'ngMaterial',
+				'amChartsDirective'
       ]
 		);
 })();

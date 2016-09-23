@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
-    "start": "node app",
-    "postinstall": "gulp serve"
+    "test": "gulp test"
   },
   "devDependencies": {
     "browser-sync": "~2.9.11",

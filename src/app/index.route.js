@@ -14,10 +14,11 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('main.messages', {
-        url: ':messagesId',
-        controller: 'MessagesController',
-        controllerAs: 'messages'
+      .state('history', {
+        url: '/:applianceId',
+        templateUrl: 'app/pages/history/history.html',
+        controller: 'HistoryController',
+        controllerAs: 'history'
       });
 
     $urlRouterProvider.otherwise('/');
