@@ -2,14 +2,34 @@
     <section layout="column" layout="space-around center" layout-gt-md="row" layout-wrap layout-align-gt-md="space-around start">
         <div class="card-occupancy" flex-gt-md="45" layout="column" layout="center center" layout-wrap ng-repeat="item in history.data">
             <md-card layout="column">
-                <div flex="70">
-                   <my-elem ></my-elem>		
+                <div flex="70" layout="row">
+                    <div flex="5"></div>
+                    <div layout="column" flex="15" layout="center center" layout-wrap>
+                        <div flex="10"></div>
+                        <div flex="20">
+                            <div class="day">MON</div>
+                            <div>Sep {{item.day}}</div>
+                        </div>
+                        <div flex="15"></div>
+                        <div flex>
+                            <md-button class="md-fab">
+                                <md-icon md-svg-src="assets/icons/edit.svg" class="white"></md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                    <div flex class="chart-wrap" layout="column">
+                        <div flex="10"></div>
+                        <div flex="5">
+                            <div class="line vertical"></div>
+                            <div class="line horizontal"></div>
+                        </div>
+                        <my-elem flex></my-elem>
+                    </div>
                 </div>
                 <div flex="30" class="occupancy">
 
                 </div>
             </md-card>
-
         </div>
     </section>
 </div>

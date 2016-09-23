@@ -18,7 +18,7 @@
 
     vm.swapComfort = function (item, flag) {
       item.comfort_active = flag;
-      $http.post('http://sse.logicenergy.com/manager/sse/api/v1/application/'+ item.appliance_id +'?access_token=' + vm.token, item).then(function (ress) {
+      $http.post('http://sse.logicenergy.com/manager/sse/api/v1/appliance/'+ item.appliance_id +'?access_token=' + vm.token, item).then(function (ress) {
         console.log(ress);
         getData();
       });
