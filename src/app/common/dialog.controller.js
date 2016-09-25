@@ -5,154 +5,60 @@
         .module('app')
 
         .directive('myElem',
-        function () {
+        function ($timeout) {
             return {
                 restrict: 'E',
                 replace: true,
-
-                template: '<div id="chartdiv" style="height: 90%; margin: 0 auto"></div>',
+                scope: {
+                    chart: '@',
+                    data: '='
+                },
+                template: '<div id="chartdiv{{chart}}" style="height: 90%; margin: 0 auto;width: 100%;"></div>',
                 link: function (scope, element, attrs) {
-
                     var chart = false;
+                    for (var i = 0; i <= scope.data.length; i++) {
+                        if (scope.data[i]) {
+                            if (scope.data[i].visits < 15) {
+                                scope.data[i].color = "#6cbad7";
+                                continue;
+                            }
+                            if (scope.data[i].visits < 18) {
+                                scope.data[i].color = "#edaa30";
+                                continue;
 
+                            }
+                            if (scope.data[i].visits < 21) {
+                                scope.data[i].color = "#89ae60";
+                                continue;
+                            }
+
+                            if (scope.data[i].visits < 22) {
+                                scope.data[i].color = "#c96961";
+                            }
+                        }
+                    }
                     var initChart = function () {
                         if (chart) chart.destroy();
                         var config = scope.config || {};
-                        chart = AmCharts.makeChart("chartdiv", {
+                        chart = AmCharts.makeChart("chartdiv" + scope.chart, {
                             "theme": "light",
                             "type": "serial",
                             "startDuration": 2,
-                            "dataProvider": [{
-                                "country": "00:00",
-                                "visits": 25,
-                                "color": "#FF0F00",
-                                "show": true
-                            }, {
-                                    "country": "01:00",
-                                    "visits": 21,
-                                    "color": "#FF6600",
-                                    "show": false
-                                }, {
-                                    "country": "02:00",
-                                    "visits": 22,
-                                    "color": "#FF9E01",
-                                    "show": false
-                                }, {
-                                    "country": "03:00",
-                                    "visits": 15,
-                                    "color": "#FCD202",
-                                    "show": false
-                                }, {
-                                    "country": "04:00",
-                                    "visits": 17,
-                                    "color": "#F8FF01",
-                                    "show": false
-                                }, {
-                                    "country": "05:00",
-                                    "visits": 18,
-                                    "color": "#B0DE09",
-                                    "show": false
-                                }, {
-                                    "country": "06:00",
-                                    "visits": 19,
-                                    "color": "#04D215",
-                                    "show": true
-                                }, {
-                                    "country": "07:00",
-                                    "visits": 29,
-                                    "color": "#0D8ECF",
-                                    "show": false
-                                }, {
-                                    "country": "08:00",
-                                    "visits": 25,
-                                    "color": "#0D52D1",
-                                    "show": false
-                                }, {
-                                    "country": "09:00",
-                                    "visits": 24,
-                                    "color": "#2A0CD0",
-                                    "show": false
-                                }, {
-                                    "country": "10:00",
-                                    "visits": 25,
-                                    "color": "#8A0CCF",
-                                    "show": false
-                                }, {
-                                    "country": "11:00",
-                                    "visits": 24,
-                                    "color": "#CD0D74",
-                                    "show": false
-                                }, {
-                                    "country": "12:00",
-                                    "visits": 23,
-                                    "color": "#754DEB",
-                                    "show": true
-                                }, {
-                                    "country": "13:00",
-                                    "visits": 23,
-                                    "color": "#DDDDDD",
-                                    "show": false
-                                }, {
-                                    "country": "14:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "15:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "16:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "17:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "18:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": true
-                                }, {
-                                    "country": "19:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "20:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "21:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "22:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                }, {
-                                    "country": "23:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": false
-                                },
-                                {
-                                    "country": "00:00",
-                                    "visits": 23,
-                                    "color": "#333333",
-                                    "show": true
-                                }],
+                            "dataProvider": scope.data,
                             "valueAxes": [{
                                 "position": "top",
                                 "axisAlpha": 0,
-                                "gridAlpha": 0
+                                "gridAlpha": 0,
+                                fontSize: 7,
+                                "labelFunction": function (valueText, serialDataItem, categoryAxis) {
+
+
+                                    // if (!serialDataItem.dataContext.show) {
+                                    return serialDataItem + "°C";
+                                    // }
+
+                                    // return valueText;
+                                },
                             }],
                             "graphs": [{
                                 "balloonText": "<b>[[value]] &deg;C</b>",
@@ -177,13 +83,13 @@
                                 "gridAlpha": 0,
                                 "position": "top",
                                 "labelFunction": function (valueText, serialDataItem, categoryAxis) {
-                                    console.log(valueText, serialDataItem, categoryAxis)
-                                    
-                                    if (!serialDataItem.dataContext.show) {
-                                        return;
-                                    }
+                                    // console.log(valueText, serialDataItem, categoryAxis)
 
-                                    return valueText;
+                                    // if (!serialDataItem.dataContext.show) {
+                                    return;
+                                    // }
+
+                                    // return valueText;
                                 },
 
 
@@ -196,8 +102,11 @@
 
 
                     };
-                    initChart();
 
+                    $timeout(function () {
+                        initChart();
+
+                    }, 100);
                 }
             }
         });

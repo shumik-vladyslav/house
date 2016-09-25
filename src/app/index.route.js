@@ -19,6 +19,12 @@
         templateUrl: 'app/pages/history/history.html',
         controller: 'HistoryController',
         controllerAs: 'history'
+      })
+      .state('schedule', {
+        url: '/schedule',
+        templateUrl: 'app/pages/history/history.html',
+        controller: 'HistoryController',
+        controllerAs: 'history'
       });
 
     $urlRouterProvider.otherwise('/');
