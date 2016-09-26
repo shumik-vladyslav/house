@@ -15,7 +15,7 @@
         controllerAs: 'main'
       })
       .state('history', {
-        url: '/:applianceId',
+        url: 'schedule/:applianceId',
         templateUrl: 'app/pages/history/history.html',
         controller: 'HistoryController',
         controllerAs: 'history'
@@ -25,6 +25,36 @@
         templateUrl: 'app/pages/history/history.html',
         controller: 'HistoryController',
         controllerAs: 'history'
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'app/pages/login/login.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+      })
+      .state('recovery', {
+        url: '/recovery',
+        templateUrl: 'app/pages/recovery/recovery.html',
+        controller: 'RecoveryController',
+        controllerAs: 'recovery'
+      })
+       .state('register', {
+        url: '/register',
+        templateUrl: 'app/pages/register/register.html',
+        controller: 'RegisterController',
+        controllerAs: 'register'
+      }) 
+      .state('check', {
+        url: '/check',
+        templateUrl: 'app/pages/check/check.html',
+        controller: 'CheckController',
+        controllerAs: 'check'
+      })
+      .state('info', {
+        url: '/info',
+        templateUrl: 'app/pages/info/info.html',
+        controller: 'InfoController',
+        controllerAs: 'info'
       });
 
     $urlRouterProvider.otherwise('/');
