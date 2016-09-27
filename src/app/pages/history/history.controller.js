@@ -15,7 +15,7 @@
   });
 
   /** @ngInject */
-  function HistoryController($scope, $mdSidenav,$rootScope, $http, $state, DialogService) {
+  function HistoryController($scope, $mdSidenav,$rootScope, $http, $state) {
     var vm = this;
      $scope.openLeftMenu = function() {
     $mdSidenav('left').toggle();

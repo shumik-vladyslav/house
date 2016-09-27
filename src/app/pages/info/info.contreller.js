@@ -6,7 +6,7 @@
     .controller('InfoController', InfoController);
 
   /** @ngInject */
-  function InfoController($state,$rootScope, $http, DialogService) {
+  function InfoController($state,$rootScope, $http) {
     var vm = this;
 
   }

@@ -6,7 +6,7 @@
     .controller('CheckController', CheckController);
 
   /** @ngInject */
-  function CheckController($state,$rootScope, $http, DialogService) {
+  function CheckController($state,$rootScope, $http) {
     var vm = this;
 
   }

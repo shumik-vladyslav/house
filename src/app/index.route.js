@@ -30,7 +30,8 @@
         url: '/login',
         templateUrl: 'app/pages/login/login.html',
         controller: 'LoginController',
-        controllerAs: 'login'
+        controllerAs: 'login',
+        freePage: true
       })
       .state('recovery', {
         url: '/recovery',
@@ -42,7 +43,8 @@
         url: '/register',
         templateUrl: 'app/pages/register/register.html',
         controller: 'RegisterController',
-        controllerAs: 'register'
+        controllerAs: 'register',
+        freePage: true
       }) 
       .state('check', {
         url: '/check',

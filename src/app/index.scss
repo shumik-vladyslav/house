@@ -427,6 +427,71 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88a650', end
   background-color: transparent;
 }
 
+md-dialog{
+    width: 500px;
+    height: 400px;
+}
+
+.temp-dialog{
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: #c46a56;
+}
+
+.temp-dialog div div h4{
+    color: white;
+}
+
+.temp-dialog div div md-divider{
+     margin: 10px
+}
+
+.temp-dialog div .temp-head .big-value{
+    font-size: 48px;
+    margin: 10px
+}
+
+.temp-dialog md-content {
+    background: #c46a56;
+}
+
+.temp-dialog div .temp-head div{
+    font-size: 8px;
+}
+
+.temp-dialog div div md-input-container button{
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: none;
+    width: 80%;
+    height: 70%;
+}
+
+ #red-slider .md-track{
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+#red-slider .md-thumb:after{
+     background-color: #c46a56 !important;
+    border-color: #ffffff !important;
+        width: 50px;
+    height: 50px;
+        border-radius: 30px;
+}
+md-slider[md-vertical] .md-thumb-container .md-thumb:after {
+    left: -14px;
+}
+#red-slider .md-focus-thumb, #red-slider .md-focus-ring{
+    background-color: #ffffff;
+}
+.temp-dialog md-content div md-slider-container{
+    height: 100%;
+}
+.temp-dialog md-content div md-slider-container md-slider .md-slider-wrapper{
+    height: 250px;
+}
+
 .background-card-2{
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d4d2d0+1,d3d3d3+51,d3d3d3+100 */
 background: #d4d2d0; /* Old browsers */
@@ -1100,6 +1165,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c54e3e', end
     width: 45%;
    
 }
+
+    .temp-dialog div .temp-head div{
+        font-size: 12px;
+    }
+
+    .temp-dialog div .temp-head .big-value{
+        font-size: 68px;
+        margin: 10px
+    }
+
+    .temp-dialog div div h4{
+        color: white;
+        font-size: 22px;
+    }
 
   }
   @media  screen and (min-device-width: 615px) and (min-width: 615px){

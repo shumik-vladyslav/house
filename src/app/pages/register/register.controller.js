@@ -6,7 +6,7 @@
     .controller('RegisterController', RegisterController);
 
   /** @ngInject */
-  function RegisterController($state,$rootScope, $http, DialogService) {
+  function RegisterController($state,$rootScope, $http) {
     var vm = this;
 
   }

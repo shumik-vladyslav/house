@@ -6,7 +6,7 @@
     .controller('RecoveryController', RecoveryController);
 
   /** @ngInject */
-  function RecoveryController($state,$rootScope, $http, DialogService) {
+  function RecoveryController($state,$rootScope, $http) {
     var vm = this;
 
   }
