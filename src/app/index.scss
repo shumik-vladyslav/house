@@ -432,13 +432,6 @@ md-dialog{
     height: 400px;
 }
 
-.temp-dialog{
-    color: white;
-    width: 100%;
-    height: 100%;
-    background: #c46a56;
-}
-
 .temp-dialog div div h4{
     color: white;
 }
@@ -450,10 +443,6 @@ md-dialog{
 .temp-dialog div .temp-head .big-value{
     font-size: 48px;
     margin: 10px
-}
-
-.temp-dialog md-content {
-    background: #c46a56;
 }
 
 .temp-dialog div .temp-head div{
@@ -472,13 +461,7 @@ md-dialog{
     background-color: #ffffff !important;
     border-color: #ffffff !important;
 }
-#red-slider .md-thumb:after{
-     background-color: #c46a56 !important;
-    border-color: #ffffff !important;
-        width: 50px;
-    height: 50px;
-        border-radius: 30px;
-}
+
 md-slider[md-vertical] .md-thumb-container .md-thumb:after {
     left: -14px;
 }
@@ -490,6 +473,107 @@ md-slider[md-vertical] .md-thumb-container .md-thumb:after {
 }
 .temp-dialog md-content div md-slider-container md-slider .md-slider-wrapper{
     height: 250px;
+}
+
+.schedul{
+    width: 100%;
+    height: 100%;
+    margin: 10px
+}
+
+.schedul .card-wrap{
+   -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    }
+
+.schedul .card-schedul .min-schedul{
+    height: 4px;
+}
+
+.schedul .card-schedul .min-schedul div span{
+     color: white;
+     z-index: 1;
+     width: 120px;
+     margin-left: 15px;
+}
+.schedul .head-schedul .big-value-schedul{
+    font-size: 40px;
+}
+.schedul-wrap{
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 90%;
+}
+
+.schedul .head-schedul .disc{
+    font-size: 10px;
+    margin: 10px
+}
+
+.temp-dialog{
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.red-temp-dialog{
+    background: #c46a56;
+}
+.orange-temp-dialog{
+    background: #f29a28;
+}
+.green-temp-dialog{
+    background: #5ca34d;
+}
+.blue-temp-dialog{
+    background: #5d6f92;
+}
+
+.red-temp-dialog md-content {
+    background: #c46a56;
+}
+
+.orange-temp-dialog md-content{
+    background: #f29a28;
+}
+.green-temp-dialog md-content{
+    background: #5ca34d;
+}
+.blue-temp-dialog md-content{
+    background: #5d6f92;
+}
+
+.red-slider .md-thumb:after{
+    background-color: #c46a56 !important;
+    border-color: #ffffff !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.orange-slider .md-thumb:after{
+    background-color: #f29a28 !important;
+    border-color: #ffffff !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.green-slider .md-thumb:after{
+    background-color: #5ca34d !important;
+    border-color: #ffffff !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.blue-slider .md-thumb:after{
+    background-color: #5d6f92 !important;
+    border-color: #ffffff !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
 }
 
 .background-card-2{
