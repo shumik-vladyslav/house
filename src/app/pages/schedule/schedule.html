@@ -1,23 +1,28 @@
 <div class="wrap">
-  <head-menu></head-menu>
+    <head-menu></head-menu>
     <div class="schedul-wrap wrap" layout="row" layout-align="space-around stretch" layout-align-xs="space-between stretch" layout-align-sm="space-between stretch">
         <div flex="15" flex-sm="25" flex-xs="45" class="schedul" ng-repeat="item in schedule.hours">
-            <div class="head-schedul" ng-style="{'color': '#c46a56'}" layout="column" layout-align="center center">
-                <div class="day-schedul" layout="row" layout-align="start center">Day {{$index + 1}}
-                    <md-button class="md-fab md-mini" ng-click="main.edit(item)" aria-label="red">
-                        <md-icon md-svg-src="assets/icons/edit.svg" class="white"></md-icon>
+            <div class="head-schedul" style="color: #ffffff" layout="column" layout-align="center stretch">
+                <div class="day-schedul" style="background-color: #1c4981">
+                    Day {{$index + 1}}
+                </div>
+                <div class="" layout="column" layout-align="center center">
+                    <md-button ng-click="main.edit(item)" aria-label="red" style="width: 100%;height: 100%;">
+                        <img src="assets/icon/i-c-o-edit.svg" class="white"></img>
                     </md-button>
                 </div>
-                <div class="big-value-schedul">23&deg;C</div>
-                <div class="disc">DESIRED TEMP</div>
+                <div class="big-value-schedul" style="color: #757373;text-align: -webkit-center;">23&deg;C</div>
+                <div class="" layout="column" layout-align="center center">
+                    <md-button ng-click="main.edit(item)" aria-label="red" style="width: 100%;height: 100%;">
+                        <img src="assets/icon/i-c-o-s-c-h-e-d-u-l-e.svg" class="white"></img>
+                    </md-button>
+                </div>
             </div>
             <md-content class="card-wrap">
                 <div class="card-schedul" ng-repeat="hour in item" layout="column" layout-align="center stretch">
-                    <div class="min-schedul" ng-repeat="min in hour.min track by $index" style="background-color: {{min || '#677274'}}" layout="column"
-                        layout-align="center stretch">
+                    <div class="min-schedul" ng-repeat="min in hour.min track by $index" style="background-color: {{min}}" layout="column" layout-align="center stretch">
                         <div ng-if="$index == 3" layout="row" layout-align="start  center">
-                            <span flex="70">{{hour.h}}:00</span>
-                            <hr flex="30">
+                            <span flex="70" style="color: #000000">{{hour.h}}:00</span>
                         </div>
                     </div>
                 </div>

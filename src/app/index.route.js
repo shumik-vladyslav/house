@@ -15,19 +15,13 @@
         controllerAs: 'main'
       })
       .state('history', {
-        url: 'schedule/:applianceId',
+        url: '/history/:applianceId',
         templateUrl: 'app/pages/history/history.html',
         controller: 'HistoryController',
         controllerAs: 'history'
       })
-      .state('schedule', {
-        url: '/schedule',
-        templateUrl: 'app/pages/history/history.html',
-        controller: 'HistoryController',
-        controllerAs: 'history'
-      })
-       .state('sched', {
-        url: '/sched',
+       .state('schedule', {
+        url: '/schedule/:applianceId',
         templateUrl: 'app/pages/schedule/schedule.html',
         controller: 'ScheduleController',
         controllerAs: 'schedule'
