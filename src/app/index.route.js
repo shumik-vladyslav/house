@@ -32,6 +32,24 @@
         controller: 'ScheduleEditController',
         controllerAs: 'scheduledit'
       })
+        .state('solar', {
+        url: '/solar',
+        templateUrl: 'app/pages/solar/solar.html',
+        controller: 'SolarController',
+        controllerAs: 'solar'
+      })
+        .state('batteries', {
+        url: '/batteries',
+        templateUrl: 'app/pages/batteries/batteries.html',
+        controller: 'BatteriesController',
+        controllerAs: 'batteries'
+      })
+        .state('smart', {
+        url: '/smart',
+        templateUrl: 'app/pages/smart/smart.html',
+        controller: 'SmartController',
+        controllerAs: 'smart'
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'app/pages/login/login.html',

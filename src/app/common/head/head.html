@@ -2,20 +2,20 @@
 
     <section layout="row" flex>
 
-        <md-sidenav class="md-sidenav-left" style="background:#61a359; opacity: 0.9;" md-component-id="left" md-disable-backdrop
+        <md-sidenav class="md-sidenav-left" style="background:#61a359; opacity: 0.9;" md-component-id="left"  md-is-locked-open
             md-whiteframe="4">
 
             <md-toolbar class="toolbar" style="background: #61a359;" layout="column" layout-align="start start">
                 <div>
-                    <img src="assets/icon/menu-green.png" class="white"></img>
+                    <img ng-click="toggleLeft()"" src="assets/icon/menu-green.png" class="white"></img>
                     <a style="margin-left: 50px;font-weight: bold;" href="/">DESHBORD</a>
                 </div>
                 <a ui-sref="schedule">SCHADULE - ROOMS</a>
                 <a ui-sref="schedule">SCHADULE - WEEK</a>
-                <a>HISTORY</a>
-                <a>SOLAR</a>
-                <a>BATTERY</a>
-                <a>SMART PLUGS</a>
+                <a ui-sref="history">HISTORY</a>
+                <a ui-sref="solar">SOLAR</a>
+                <a ui-sref="batteries">BATTERY</a>
+                <a ui-sref="smart">SMART PLUGS</a>
             </md-toolbar>
 
             <!--<md-content layout-margin style="background:#1d5183; opacity: 0.9;">
